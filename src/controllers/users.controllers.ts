@@ -18,7 +18,7 @@ const listUsersController = async (req: Request, res: Response) => {
 
 const updateUserController = async (req: Request, res: Response) => {
     const userData: IUserUpdateRequest = req.body
-    const userId = parseInt(req.params.id)
+    const userId = req.params.id
     const updatedUser = await updateUserService(userData, String(userId))
     return res.json(updatedUser)
 }

@@ -7,13 +7,13 @@ const listUsersService = async (): Promise<IUserResponse[]> => {
 
     const userRepository = AppDataSource.getRepository(User)
 
-    const users = await userRepository.find();
+    const users = await userRepository.find()
 
   const usersWithoutPassword = userWithoutPasswordSerializerArray.validate(users, {
     stripUnknown: true,
   });
 
-  return usersWithoutPassword;
+  return usersWithoutPassword
 }  
 
 export default listUsersService

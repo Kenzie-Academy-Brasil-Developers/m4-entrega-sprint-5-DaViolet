@@ -4,6 +4,7 @@ import Category from "../../entities/category.entities";
 import Property from "../../entities/property.entities";
 import { AppError } from "../../errors/AppError";
 import { createAddressService } from '../addresses/createAddress.service';
+import { userUpdateSerializer } from '../../serializers/user.serializers';
 
 const createPropertyService = async (propertyData: IPropertyRequest) => {
 

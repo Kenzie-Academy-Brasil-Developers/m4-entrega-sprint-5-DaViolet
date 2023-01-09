@@ -15,9 +15,9 @@ const userSerializer: SchemaOf<IUserRequest> = yup.object().shape({
 });
 
 const userUpdateSerializer: SchemaOf<IUserUpdateRequest> = yup.object().shape({
-  email: yup.string().email().notRequired(),
-  name: yup.string().notRequired(),
-  password: yup.string().notRequired(),
+  email: yup.string().email(),
+  name: yup.string(),
+  password: yup.string(),
 });
 
 const userLoginSerializer: SchemaOf<IUserLogin> = yup.object().shape({
